@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
     "global.out.css": "global.css",
   });
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-  eleventyConfig.addPassthroughCopy("src/_includes/css");
   eleventyConfig.addPassthroughCopy("src/img");
 
   return {
