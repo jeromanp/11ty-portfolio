@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "global.out.css": "global.css",
   });
+  eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   return {
     passthroughFileCopy: true,
