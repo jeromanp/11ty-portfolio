@@ -762,6 +762,10 @@ video {
   background-image: url('/img/me.jpg');
 }
 
+.bg-\[url\(\'\/img\/me-bw\.jpg\'\)\] {
+  background-image: url('/img/me-bw.jpg');
+}
+
 .bg-center {
   background-position: center;
 }
