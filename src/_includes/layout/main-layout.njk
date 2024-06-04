@@ -1,37 +1,19 @@
----
-
----
-{# <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <meta name="description" value="{{ description }}">
-    <link rel="stylesheet" href="./global.css"/>
-
-  </head>
-  <body>    
-    {{ content | safe }}
-  </body>
-</html> #}
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
-  {# <link rel="icon" href="/img/favicon.png"> #}
-   <link rel="stylesheet" href="./global.css"/>
-</head>
-<body>
-  {% include "layout/navbar.njk" %}
-  <main class="h-screen">
-    {{ content | safe }}
-  </main>
-  {% include "layout/footer.njk" %}
-  <script src="/js/main.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link  rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="./global.css"/>
+  </head>
+  <body>
+    {% include "layout/navbar.njk" %}
+    <main class="h-screen">
+      {{ content | safe }}
+    </main>
+    {% include "layout/footer.njk" %}
+    <script src="/js/main.js" type="module"></script>
+  </body>
 </html>
