@@ -1,0 +1,45 @@
+{
+   
+    "skills": [
+      {
+        "name": "React",
+        "svg": "/img/svg/react.svg"
+      },
+      {
+        "name": "NextJS",
+        "svg": "/img/svg/nextjs.svg"
+      },
+      {
+        "name": "Redux",
+        "svg": "/img/svg/redux.svg"
+      }  ,
+      {
+        "name": "Tailwind",
+        "svg": "/img/svg/tailwind.svg"
+      },
+      {
+        "name": "Vercel",
+        "svg": "/img/svg/vercel.svg"
+      },
+      {
+        "name": "NodeJS",
+        "svg": "/img/svg/node.svg"
+      } ,
+      {
+        "name": "ExpressJS",
+        "svg": "/img/svg/express.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "svg": "/img/svg/postgresql.svg"
+      },
+      {
+        "name": "Sequelize",
+        "svg": "/img/svg/sequelize.svg"
+      }     ,
+      {
+        "name": "Git",
+        "svg": "/img/svg/git.svg"
+      }  
+    ]
+  }
