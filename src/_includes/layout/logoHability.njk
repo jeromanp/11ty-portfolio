@@ -1,0 +1,6 @@
+{% for hability in habilities.skills %}
+    <div class="text-gray-400 flex flex-row items-center ">
+        <img src="{{ hability.svg }}" class="w-20 h-auto">
+            <span class="ml-3 text-xl text-white">{{ hability.name }}</span>
+        </div>
+{% endfor %}
