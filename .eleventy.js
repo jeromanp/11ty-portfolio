@@ -5,7 +5,9 @@ module.exports = function (eleventyConfig) {
     "global.out.css": "global.css",
   });
   eleventyConfig.addPassthroughCopy("src/img");
-  eleventyConfig.addPassthroughCopy("code/js");
+  eleventyConfig.addPassthroughCopy("src/js");
+
+
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   return {
     passthroughFileCopy: true,
