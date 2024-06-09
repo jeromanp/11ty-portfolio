@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
+    "clean": "npx @11ty/eleventy --clean",
     "css": "tailwindcss -i ./src/_includes/css/global.css -o global.out.css --watch"
   },
   "keywords": [],
