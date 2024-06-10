@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "clean": "npx @11ty/eleventy --clean",
-    "css": "tailwindcss -i ./src/_includes/css/global.css -o global.out.css --watch"
+     "css": "npx tailwindcss -i ./src/_includes/css/global.css -o ./src/_includes/css/global.out.css"
   },
   "keywords": [],
   "author": "",
