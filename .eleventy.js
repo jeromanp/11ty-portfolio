@@ -1,9 +1,7 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({
-    "global.out.css": "global.css",
-  });
+  eleventyConfig.addPassthroughCopy("src/_includes/css");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/js");
 
