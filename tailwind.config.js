@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,md,njk,ejs,pug}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'dufanthe': ['Dufanthe', 'sans-serif'],
+        'grantham': ['Grantham', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
