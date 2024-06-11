@@ -1,3 +1,17 @@
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Dufanthe";
+  src: url("/fonts/Dufanthe.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Grantham";
+  src: url("/fonts/Grantham.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
