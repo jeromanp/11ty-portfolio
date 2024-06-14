@@ -1,0 +1,135 @@
+{
+  "frontend": [
+    {
+      "name": "HTML",
+      "svg": "/img/svg/html.svg",
+      "description": "Lenguaje de marcado para crear páginas web."
+    },
+    {
+      "name": "CSS",
+      "svg": "/img/svg/css.svg",
+      "description": "Estiliza y da formato a las páginas web."
+    },
+    {
+      "name": "JavaScript",
+      "svg": "/img/svg/javascript.svg",
+      "description": "Lenguaje de programación para la web."
+    },
+    {
+      "name": "React",
+      "svg": "/img/svg/react.svg",
+      "description": "Biblioteca de JavaScript para construir interfaces."
+    },
+    {
+      "name": "Next",
+      "svg": "/img/svg/nextjs.svg",
+      "description": "Framework para aplicaciones React de lado del servidor."
+    },
+    {
+      "name": "Redux",
+      "svg": "/img/svg/redux.svg",
+      "description": "Gestión de estado predecible para aplicaciones JavaScript."
+    },
+    {
+      "name": "11ty",
+      "svg": "/img/svg/eleventy.svg",
+      "description": "Generador de sitios estáticos simple y flexible."
+    },
+    {
+      "name": "Figma",
+      "svg": "/img/svg/figma.svg",
+      "description": "Herramienta de diseño colaborativo en la nube."
+    },
+    {
+      "name": "Tailwind",
+      "svg": "/img/svg/tailwind.svg",
+      "description": "Framework CSS para un diseño rápido y flexible."
+    },
+    {
+      "name": "Chakra",
+      "svg": "/img/svg/chakraui.svg",
+      "description": "Componentes React accesibles y modernos."
+    }
+  ],
+  "backend": [
+    {
+      "name": "NodeJS",
+      "svg": "/img/svg/node.svg",
+      "description": "Entorno de ejecución para JavaScript en el servidor."
+    },
+    {
+      "name": "ExpressJS",
+      "svg": "/img/svg/express.svg",
+      "description": "Framework web minimalista para Node.js."
+    },
+    {
+      "name": "PostgreSQL",
+      "svg": "/img/svg/postgresql.svg",
+      "description": "Sistema de gestión de bases de datos relacional."
+    },
+    {
+      "name": "Sequelize",
+      "svg": "/img/svg/sequelize.svg",
+      "description": "ORM para Node.js soportando múltiples bases de datos."
+    },
+    {
+      "name": "Supabase",
+      "svg": "/img/svg/supabase.svg",
+      "description": "Backend como servicio basado en PostgreSQL."
+    }
+  ],
+  "other": [
+    {
+      "name": "Git",
+      "svg": "/img/svg/git.svg",
+      "description": "Sistema de control de versiones distribuido."
+    },
+    {
+      "name": "SCRUM",
+      "svg": "/img/svg/scrum.svg",
+      "description": "Marco ágil para la gestión de proyectos complejos."
+    },
+    {
+      "name": "Vercel",
+      "svg": "/img/svg/vercel.svg",
+      "description": "Plataforma de despliegue frontend para sitios y apps."
+    },
+    {
+      "name": "Trello",
+      "svg": "/img/svg/trello.svg",
+      "description": "Herramienta de gestión de proyectos basada en tableros."
+    },
+    {
+      "name": "Insomnia",
+      "svg": "/img/svg/insomnia.svg",
+      "description": "Cliente de API para probar y diseñar solicitudes HTTP."
+    },
+    {
+      "name": "NPM",
+      "svg": "/img/svg/npm.svg",
+      "description": "Gestor de paquetes para Node.js."
+    }
+  ],
+  "formation": [
+    {
+      "name": "Electrónica",
+      "svg": "/img/svg/electronica.svg",
+      "description": "Estudio de circuitos y dispositivos electrónicos."
+    },
+    {
+      "name": "Soporte técnico",
+      "svg": "/img/svg/soporte.svg",
+      "description": "Solución de problemas y asistencia técnica."
+    },
+    {
+      "name": "CCNA y CCNP",
+      "svg": "/img/svg/cisco.svg",
+      "description": "Certificaciones en redes de Cisco."
+    },
+    {
+      "name": "Redes HFC",
+      "svg": "/img/svg/hfc.svg",
+      "description": "Tecnología para telecomunicaciones híbridas."
+    }
+  ]
+}
