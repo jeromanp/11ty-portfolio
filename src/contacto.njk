@@ -1,0 +1,24 @@
+--- 
+layout: layout/main-layout.njk 
+title: Contacto 
+---
+
+<div class="p-1 sm:ml-64">
+    <div class=" border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 ">
+        <div class="bg-gray-950">
+            <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+
+                <h2 class="font-bold text-3xl sm:text-3xl md:text-4xl text-gray-400 py-5">Contacto</h2>
+
+                <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-gray-100">
+                    Tienes alguna duda, pregunta, sugerencia o comentario??, envia un email y hablemos un rato.
+                </p>
+
+            </div>
+            {% include "layout/formContact.njk" %}
+        </div>
+    </div>
+    <footer>
+        {% include "layout/footer.njk" %}
+    </footer>
+</div>
