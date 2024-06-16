@@ -3,7 +3,7 @@
         <div class="relative flex w-80 h-100 flex-col rounded-xl bg-gray-500 bg-clip-border text-gray-700 shadow-md">
             <div class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg
                     shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-                <img src="{{ item.image }}"></div>
+                <img class="hover:scale-105" src="{{ item.image }}"></div>
             <div class="p-6">
                 <h5 class="mb-2 block text-xl font-semibold leading-snug tracking-normal text-orange-400 antialiased font-grantham">
                     {{ item.title }}
@@ -22,9 +22,9 @@
                 </button>
                 <div class="mx-5 flex flex-row">
                     <a href="{{ item.repository }}" target="_blank">
-                        <img class="w-8 mx-2 hover:opacity-70" src="/img/svg/github.svg"></a>
+                        <img class="w-8 mx-2 hover:opacity-40" src="/img/svg/github.svg"></a>
                     <a href="{{ item.deploy }}" target="_blank">
-                        <img class="w-8 mx-2 hover:opacity-70" src="/img/svg/web.svg"></a>
+                        <img class="w-8 mx-2 hover:opacity-40" src="/img/svg/web.svg"></a>
                 </div>
             </div>
         </div>
