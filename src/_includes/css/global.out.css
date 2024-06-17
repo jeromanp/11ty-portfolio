@@ -1872,12 +1872,12 @@ video {
     width: 66.666667%;
   }
 
-  .md\:w-\[30rem\] {
-    width: 30rem;
+  .md\:w-\[100\%\] {
+    width: 100%;
   }
 
-  .md\:w-\[50\%\] {
-    width: 50%;
+  .md\:w-\[30rem\] {
+    width: 30rem;
   }
 
   .md\:w-auto {
@@ -1934,6 +1934,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
+  }
+
+  .lg\:ml-8 {
+    margin-left: 2rem;
   }
 
   .lg\:mt-2 {
