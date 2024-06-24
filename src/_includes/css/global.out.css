@@ -1604,6 +1604,11 @@ video {
   animation: spin 1s linear infinite;
 }
 
+.hover\:bg-amber-950:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 26 3 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
