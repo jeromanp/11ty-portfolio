@@ -1,6 +1,6 @@
 {% for hability in habilities.skills %}
-    <div class="text-gray-400 flex flex-row items-center ">
-        <img src="{{ hability.svg }}" class="w-20 h-auto">
-            <span class="ml-3 text-xl text-white font-grantham">{{ hability.name }}</span>
+    <div class="text-gray-400 flex flex-row items-center">
+        <img src="{{ hability.svg }}" class="w-20 h-auto hover:animate-spin">
+            <span class="ml-3 text-xl text-white font-grantham hover:animate-ping">{{ hability.name }}</span>
         </div>
 {% endfor %}
