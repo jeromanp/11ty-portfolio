@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "clean": "npx @11ty/eleventy --clean",
-     "css": "npx tailwindcss -i ./src/_includes/css/global.css -o ./src/_includes/css/global.out.css"
+    "css": "npx tailwindcss -i ./src/_includes/css/global.css -o ./src/_includes/css/global.out.css"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,8 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
