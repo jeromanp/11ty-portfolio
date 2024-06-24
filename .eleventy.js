@@ -1,4 +1,5 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+require('dotenv').config();
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_includes/css");
@@ -6,8 +7,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/404.html");
-
-
+  eleventyConfig.addGlobalData('env', process.env);
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   return {
