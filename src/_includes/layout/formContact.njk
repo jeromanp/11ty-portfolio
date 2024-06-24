@@ -1,41 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init('{{ env.EMAILJS_PUBLIC_KEY }}');
+        });
+    </script>
+        <script type="text/javascript">
+        window.onload = function () {
+            document
+                .getElementById('contact-form')
+                .addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const serviceID = '{{ env.EMAILJS_SERVICE }}'; 
+                    const templateID = '{{ env.EMAILJS_TEMPLATE }}';
+
+                    emailjs.sendForm(serviceID, templateID, this)
+                        .then(() => {
+                            Swal.fire({
+                                icon: 'success',
+                                title: '¡Éxito!',
+                                text: '¡Su mensaje ha sido enviado con éxito!',
+                                timer: 1500,
+                                background:"#1F2937",
+                                color:"#ffffff"
+                            });
+                            this.reset()
+                        }, (error) => {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: 'Hubo un error al enviar el mensaje: ' + error.text,
+                            });
+                        });
+                });
+        }
+    </script>
+</head>
+<body>
 <section class="h-screen relative bg-gray-950 text-gray-400">
-
     <div class="container mx-auto px-5 py-24">
-
         <div class="mx-auto md:w-2/3 lg:w-1/2">
             <div class="-m-2 flex flex-wrap">
-
                 <!-- form -->
-                <div class="w-1/2 p-2">
-                    <div class="relative font-grantham">
-                        <input required type="text" id="name" name="name" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-sky-500 focus:bg-gray-900 focus:ring-2 focus:ring-sky-900" placeholder="Name"/>
-                        <label for="name" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-sky-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-sky-500">Nombre</label>
+                <form id="contact-form" class="w-full p-2">
+                    <div class="w-full p-2">
+                        <div class="relative font-grantham">
+                            <input required="required" type="text" id="name" name="user_name" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-sky-500 focus:bg-gray-900 focus:ring-2 focus:ring-sky-900" placeholder="Name"/>
+                            <label for="name" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-sky-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-sky-500">Nombre</label>
+                        </div>
                     </div>
-                </div>
-                <div class="w-1/2 p-2 font-grantham">
-                    <div class="relative">
-                        <input required type="email" id="email" name="email" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-sky-500 focus:bg-gray-900 focus:ring-2 focus:ring-sky-900" placeholder="Email"/>
-                        <label for="email" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-sky-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-sky-500">Email</label>
+                    <div class="w-1/2 p-2 font-grantham">
+                        <div class="relative">
+                            <input required="required" type="email" id="email" name="user_email" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-sky-500 focus:bg-gray-900 focus:ring-2 focus:ring-sky-900" placeholder="Email"/>
+                            <label for="email" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-sky-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-sky-500">Email</label>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-4 w-full p-2 font-grantham">
-                    <div class="relative">
-                        <textarea required id="message" name="message" class="peer h-32 w-full resize-none rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-sky-500 focus:bg-gray-900 focus:ring-2 focus:ring-sky-900" placeholder="Message"></textarea>
-                        <label for="message" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-sky-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-sky-500">Mensaje</label>
+                    <div class="mt-4 w-full p-2 font-grantham">
+                        <div class="relative">
+                            <textarea required="required" id="message" name="user_message" class="peer h-32 w-full resize-none rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-sky-500 focus:bg-gray-900 focus:ring-2 focus:ring-sky-900" placeholder="Message"></textarea>
+                            <label for="message" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-sky-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-sky-500">Mensaje</label>
+                        </div>
                     </div>
-                </div>
-                <div class="w-full p-2">
-                    <button class="mx-auto flex rounded border-0 bg-sky-500 py-2 px-8 text-lg text-white hover:bg-sky-600 focus:outline-none font-grantham">Enviar</button>
-                </div>
-
-                
+                    <div class="w-full p-2">
+                        <button type="submit" class="mx-auto flex rounded border-0 bg-sky-500 py-2 px-8 text-lg text-white hover:bg-sky-600 focus:outline-none font-grantham">Enviar</button>
+                    </div>
+                </form>
                 <div class="mt-8 w-full flex justify-center border-t border-gray-800 p-2 pt-8 text-center">
                     {% include "layout/socialNetworks.njk" %}
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </section>
+</body>
+</html>
